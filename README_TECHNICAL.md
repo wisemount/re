@@ -95,7 +95,9 @@ When pushing to a public GitHub repository, follow these guidelines:
    ```typescript
    basePath: '/your-repo-name',
    ```
-3. Use the **GitHub Actions** "Next.js" deployment template in Settings > Pages.
+3. I have provided a GitHub Actions workflow at `.github/workflows/nextjs.yml`. 
+4. Go to **Settings > Pages** on your GitHub repo and under **Build and deployment > Source**, select **GitHub Actions**.
+5. Once you push to `main`, the site will automatically deploy.
 
 ### Cloudflare Pages
 1. Connect your repository to Cloudflare.
