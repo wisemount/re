@@ -45,10 +45,11 @@ const Header = () => {
                     </span>
                 </Link>
                 <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                    <Link href="/properties" style={{ fontWeight: '600', color: 'var(--foreground-rgb)' }}>Properties</Link>
-                    <Link href="/#featured" style={{ fontWeight: '600', color: 'var(--text-muted)' }}>Featured</Link>
-                    <a href={`tel:+91XXXXXXXXXX`} className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
-                        Call Now
+                    <Link href="/" style={{ fontWeight: '600', color: 'var(--foreground-rgb)' }}>Home</Link>
+                    <Link href="/solutions" style={{ fontWeight: '600' }}>Solutions</Link>
+                    <Link href="/#collaborate" style={{ fontWeight: '600' }}>Collaborate</Link>
+                    <a href={`https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20collaborate%20with%20WiseMount`} className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.875rem' }}>
+                        Partner with Us
                     </a>
                 </nav>
             </div>

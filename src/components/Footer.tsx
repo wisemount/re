@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CONTACT_INFO } from '@/utils/whatsapp';
 
 const Footer = () => {
@@ -9,23 +10,21 @@ const Footer = () => {
             marginTop: '4rem'
         }}>
             <div className="container" id="contact">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                    gap: '2rem'
-                }}>
-                    <div>
-                        <h3 style={{ marginBottom: '1rem' }}>WiseMount</h3>
-                        <p style={{ color: 'var(--text-muted)' }}>
-                            Your trusted partner in finding premium real estate properties.
+                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
+                    <div style={{ maxWidth: '400px' }}>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1.5rem', background: 'var(--gradient-logo)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WiseMount</h3>
+                        <p style={{ color: 'var(--text-muted)', lineHeight: '1.7' }}>
+                            We provide innovative real estate solutions tailored for the modern market. We prioritize collaboration and fresh perspectives to build the future of property.
                         </p>
                     </div>
                     <div>
-                        <h4 style={{ marginBottom: '1rem' }}>Quick Links</h4>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
-                            <li style={{ marginBottom: '0.5rem' }}><a href="/properties">All Properties</a></li>
-                            <li style={{ marginBottom: '0.5rem' }}><a href="/#featured">Featured Listings</a></li>
-                        </ul>
+                        <h4 style={{ fontWeight: '700', marginBottom: '1.5rem' }}>Quick Links</h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: 'var(--text-muted)' }}>
+                            <Link href="/">Home</Link>
+                            <Link href="/solutions">Solutions</Link>
+                            <Link href="/#collaborate">Collaboration</Link>
+                            <Link href="/contact">Contact Us</Link>
+                        </div>
                     </div>
                     <div>
                         <h4 style={{ marginBottom: '1rem' }}>Contact Us</h4>
