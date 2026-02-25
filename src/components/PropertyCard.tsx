@@ -23,8 +23,6 @@ const PropertyCard = ({ property }: { property: Property }) => {
                         src={property.images[0]}
                         alt={property.title}
                         style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     />
                     <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
                         <span className="badge badge-blue">{property.type}</span>

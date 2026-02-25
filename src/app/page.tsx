@@ -83,27 +83,7 @@ export default function Home() {
               <Link
                 key={location.id}
                 href={`/location/${location.slug}`}
-                style={{
-                  backgroundColor: 'white',
-                  padding: '2.5rem 1.5rem',
-                  borderRadius: '1.25rem',
-                  textAlign: 'center',
-                  border: '1px solid var(--border-color)',
-                  fontWeight: '700',
-                  fontSize: '1.25rem',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.borderColor = 'var(--blue-primary)';
-                  e.currentTarget.style.color = 'var(--blue-primary)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.borderColor = 'var(--border-color)';
-                  e.currentTarget.style.color = 'inherit';
-                }}
+                className="location-link"
               >
                 📍 {location.name}
               </Link>

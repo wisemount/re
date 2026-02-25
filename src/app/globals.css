@@ -136,9 +136,27 @@ a {
   position: relative;
 }
 
-.property-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.property-card:hover img {
+  transform: scale(1.05);
+}
+
+.location-link {
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: block;
+}
+
+.location-link:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
 }
 
 .badge {
