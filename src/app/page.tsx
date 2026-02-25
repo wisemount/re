@@ -20,33 +20,44 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="section" style={{
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/hero-bg.jpg")',
+        backgroundImage: 'linear-gradient(135deg, rgba(43, 118, 189, 0.9), rgba(103, 78, 180, 0.8)), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
         color: 'white',
         textAlign: 'center',
-        padding: '8rem 0'
+        padding: '10rem 0'
       }}>
         <div className="container">
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>Find Your Perfect Space</h1>
-          <p style={{ fontSize: '1.25rem', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-            Browse through our curated list of premium properties and find the home of your dreams today.
+          <h1 style={{ fontSize: '4.5rem', fontWeight: '900', marginBottom: '1.5rem', letterSpacing: '-0.05em', lineHeight: '1.1' }}>
+            Find Your Dream Home <br /> With WiseMount
+          </h1>
+          <p style={{ fontSize: '1.5rem', marginBottom: '3.5rem', maxWidth: '800px', margin: '0 auto', opacity: '0.9', fontWeight: '500' }}>
+            Explore the finest properties in premium locations. Your journey to a perfect space starts with us.
           </p>
-          <Link href="/properties" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-            Explore Properties
-          </Link>
+          <div style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center' }}>
+            <Link href="/properties" className="btn" style={{ padding: '1.25rem 2.5rem', fontSize: '1.125rem', backgroundColor: 'white', color: 'var(--blue-primary)', fontWeight: '700' }}>
+              Explore Properties
+            </Link>
+            <a href={`tel:+91XXXXXXXXXX`} className="btn" style={{ padding: '1.25rem 2.5rem', fontSize: '1.125rem', border: '2px solid white', color: 'white', fontWeight: '700' }}>
+              📞 Call an Agent
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Featured Section */}
       <section className="section" id="featured">
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
             <div>
-              <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>Featured Properties</h2>
-              <p style={{ color: 'var(--text-muted)' }}>Some of our most exclusive listings</p>
+              <span className="badge badge-purple" style={{ marginBottom: '1rem', display: 'inline-block' }}>Curated for you</span>
+              <h2 style={{ fontSize: '3rem', fontWeight: '900', marginBottom: '0.5rem', letterSpacing: '-0.025em' }}>Featured Properties</h2>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>Handpicked listings that define luxury and comfort.</p>
             </div>
-            <Link href="/properties" style={{ color: 'var(--accent-color)', fontWeight: '600' }}>View All &rarr;</Link>
+            <Link href="/properties" style={{ color: 'var(--blue-primary)', fontWeight: '700', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              View All Listings <span>&rarr;</span>
+            </Link>
           </div>
           <div className="grid">
             {featuredProperties.map(property => (
@@ -57,13 +68,16 @@ export default function Home() {
       </section>
 
       {/* Locations Section */}
-      <section className="section" style={{ backgroundColor: '#f9fafb' }}>
+      <section className="section" style={{ backgroundColor: '#f8fafc', borderTop: '1px solid var(--border-color)' }}>
         <div className="container">
-          <h2 style={{ fontSize: '2rem', marginBottom: '2.5rem', textAlign: 'center' }}>Explore by Location</h2>
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <span className="badge badge-blue" style={{ marginBottom: '1rem', display: 'inline-block' }}>Neighborhoods</span>
+            <h2 style={{ fontSize: '3rem', fontWeight: '900', letterSpacing: '-0.025em' }}>Explore by Location</h2>
+          </div>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '1.5rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '2rem'
           }}>
             {locations.map(location => (
               <Link
@@ -71,14 +85,27 @@ export default function Home() {
                 href={`/location/${location.slug}`}
                 style={{
                   backgroundColor: 'white',
-                  padding: '1.5rem',
-                  borderRadius: '0.5rem',
+                  padding: '2.5rem 1.5rem',
+                  borderRadius: '1.25rem',
                   textAlign: 'center',
                   border: '1px solid var(--border-color)',
-                  fontWeight: '600'
+                  fontWeight: '700',
+                  fontSize: '1.25rem',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.borderColor = 'var(--blue-primary)';
+                  e.currentTarget.style.color = 'var(--blue-primary)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.borderColor = 'var(--border-color)';
+                  e.currentTarget.style.color = 'inherit';
                 }}
               >
-                {location.name}
+                📍 {location.name}
               </Link>
             ))}
           </div>

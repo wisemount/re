@@ -42,98 +42,103 @@ export default async function PropertyPage({ params }: Props) {
 
             <div className="section" style={{ paddingTop: '2rem' }}>
                 <div className="container">
-                    <div className="responsive-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
+                    <div className="responsive-grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
                         {/* Image Section */}
                         <div>
                             <div style={{
-                                backgroundColor: '#eee',
-                                height: '400px',
-                                borderRadius: '0.75rem',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: '#888',
-                                marginBottom: '1rem'
+                                backgroundColor: '#f1f5f9',
+                                height: '500px',
+                                borderRadius: '1.5rem',
+                                overflow: 'hidden',
+                                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+                                marginBottom: '1.5rem'
                             }}>
-                                Main Highlight Image
+                                <img
+                                    src={property.images[0]}
+                                    alt={property.title}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
                             </div>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
-                                <div style={{ backgroundColor: '#eee', height: '100px', borderRadius: '0.5rem' }}></div>
-                                <div style={{ backgroundColor: '#eee', height: '100px', borderRadius: '0.5rem' }}></div>
-                                <div style={{ backgroundColor: '#eee', height: '100px', borderRadius: '0.5rem' }}></div>
+                                <div style={{ backgroundColor: '#f1f5f9', height: '120px', borderRadius: '1rem', overflow: 'hidden' }}>
+                                    <img src={property.images[0]} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: '0.6' }} />
+                                </div>
+                                <div style={{ backgroundColor: '#f1f5f9', height: '120px', borderRadius: '1rem' }}></div>
+                                <div style={{ backgroundColor: '#f1f5f9', height: '120px', borderRadius: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', fontWeight: '600' }}>+ More</div>
                             </div>
                         </div>
 
                         {/* Content Section */}
-                        <div>
-                            <div style={{ marginBottom: '1.5rem' }}>
-                                <span style={{
-                                    backgroundColor: '#e0f2fe',
-                                    color: '#0369a1',
-                                    padding: '0.25rem 0.75rem',
-                                    borderRadius: '9999px',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600'
-                                }}>
+                        <div style={{ paddingTop: '1rem' }}>
+                            <div style={{ marginBottom: '2rem' }}>
+                                <span className="badge badge-blue" style={{ fontSize: '0.875rem', padding: '0.5rem 1rem' }}>
                                     {property.type}
                                 </span>
-                                <h1 style={{ fontSize: '2.5rem', marginTop: '1rem', marginBottom: '0.5rem' }}>{property.title}</h1>
-                                <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{property.location}</p>
-                                <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-color)' }}>{property.price}</div>
+                                <h1 style={{ fontSize: '3rem', fontWeight: '900', marginTop: '1.5rem', marginBottom: '0.75rem', letterSpacing: '-0.025em' }}>{property.title}</h1>
+                                <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    📍 {property.location}
+                                </p>
+                                <div style={{ fontSize: '3rem', fontWeight: '900', color: 'var(--blue-primary)', marginBottom: '2rem' }}>{property.price}</div>
                             </div>
 
                             <div style={{
-                                display: 'flex',
-                                gap: '2rem',
-                                padding: '1.5rem 0',
-                                borderTop: '1px solid var(--border-color)',
-                                borderBottom: '1px solid var(--border-color)',
-                                marginBottom: '1.5rem'
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(3, 1fr)',
+                                gap: '1.5rem',
+                                padding: '2rem 0',
+                                borderTop: '2px solid var(--border-color)',
+                                borderBottom: '2px solid var(--border-color)',
+                                marginBottom: '2.5rem'
                             }}>
                                 <div>
-                                    <div style={{ fontWeight: 'bold' }}>{property.bedrooms}</div>
-                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Bedrooms</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: '800' }}>{property.bedrooms}</div>
+                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', fontWeight: '600' }}>Bedrooms</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 'bold' }}>{property.bathrooms}</div>
-                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Bathrooms</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: '800' }}>{property.bathrooms}</div>
+                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', fontWeight: '600' }}>Bathrooms</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 'bold' }}>{property.sqft}</div>
-                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Sq Ft</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: '800' }}>{property.sqft}</div>
+                                    <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)', fontWeight: '600' }}>Sq Ft Area</div>
                                 </div>
                             </div>
 
-                            <div style={{ marginBottom: '2rem' }}>
-                                <h3 style={{ marginBottom: '1rem' }}>Description</h3>
-                                <p style={{ lineHeight: '1.6', color: '#4b5563' }}>{property.description}</p>
+                            <div style={{ marginBottom: '2.5rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem' }}>About this property</h3>
+                                <p style={{ lineHeight: '1.8', color: '#334155', fontSize: '1.125rem' }}>{property.description}</p>
                             </div>
 
-                            <div style={{ marginBottom: '2rem' }}>
-                                <h3 style={{ marginBottom: '1rem' }}>Amenities</h3>
+                            <div style={{ marginBottom: '3rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1.25rem' }}>Key Amenities</h3>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                                     {property.amenities.map((amenity, index) => (
                                         <span key={index} style={{
+                                            background: '#f8fafc',
                                             border: '1px solid var(--border-color)',
-                                            padding: '0.5rem 1rem',
-                                            borderRadius: '0.375rem',
-                                            fontSize: '0.875rem'
+                                            padding: '0.75rem 1.25rem',
+                                            borderRadius: '0.75rem',
+                                            fontSize: '0.95rem',
+                                            fontWeight: '600',
+                                            color: '#475569'
                                         }}>
-                                            {amenity}
+                                            ✨ {amenity}
                                         </span>
                                     ))}
                                 </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                                <a href={`tel:+91XXXXXXXXXX`} className="btn btn-primary" style={{ backgroundColor: '#000' }}>Call Agent</a>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '1rem' }}>
+                                <a href={`tel:+91XXXXXXXXXX`} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '1.25rem' }}>
+                                    📞 Call Agent
+                                </a>
                                 <a
                                     href={`https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20${encodeURIComponent(property.title)}`}
                                     target="_blank"
                                     className="btn btn-primary"
-                                    style={{ backgroundColor: '#25D366' }}
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', backgroundColor: '#25D366', backgroundImage: 'none', padding: '1.25rem' }}
                                 >
-                                    WhatsApp
+                                    💬 WhatsApp Inquiry
                                 </a>
                             </div>
                         </div>

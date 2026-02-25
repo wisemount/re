@@ -9,9 +9,16 @@
     "bedrooms": 3,
     "bathrooms": 3,
     "sqft": 1800,
-    "images": ["/images/prop1-1.jpg", "/images/prop1-2.jpg"],
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+    ],
     "description": "A spacious and modern 3BHK apartment in the heart of Downtown with panoramic city views.",
-    "amenities": ["Parking", "Gym", "Pool", "24/7 Security"],
+    "amenities": [
+      "Parking",
+      "Gym",
+      "Pool",
+      "24/7 Security"
+    ],
     "featured": true
   },
   {
@@ -24,9 +31,16 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": 3500,
-    "images": ["/images/prop2-1.jpg"],
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+    ],
     "description": "Exquisite villa featuring a private garden, modular kitchen, and luxury finishes.",
-    "amenities": ["Garden", "Parking", "Smart Home", "Solar Panels"],
+    "amenities": [
+      "Garden",
+      "Parking",
+      "Smart Home",
+      "Solar Panels"
+    ],
     "featured": true
   },
   {
@@ -39,9 +53,15 @@
     "bedrooms": 1,
     "bathrooms": 1,
     "sqft": 550,
-    "images": ["/images/prop3-1.jpg"],
+    "images": [
+      "https://images.unsplash.com/photo-1536376074432-8d6325b91d06?auto=format&fit=crop&w=800&q=80"
+    ],
     "description": "Perfect for young professionals, this studio offers convenience and modern living.",
-    "amenities": ["Parking", "Laundry", "Elevator"],
+    "amenities": [
+      "Parking",
+      "Laundry",
+      "Elevator"
+    ],
     "featured": false
   }
 ]

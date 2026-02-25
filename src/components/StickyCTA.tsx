@@ -8,33 +8,34 @@ const StickyCTA = ({ propertyName }: { propertyName?: string }) => {
     return (
         <div style={{
             position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            backgroundColor: 'white',
-            borderTop: '1px solid var(--border-color)',
-            padding: '0.75rem 1rem',
+            bottom: '1.5rem',
+            left: '1.5rem',
+            right: '1.5rem',
+            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+            backdropFilter: 'blur(12px)',
+            border: '1px solid var(--border-color)',
+            borderRadius: '1rem',
+            padding: '1rem',
             display: 'flex',
-            gap: '1rem',
+            gap: '0.75rem',
             zIndex: 1000,
-            boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1)',
-            // Shown only on mobile via CSS (simplification for this static build)
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2)',
         }} className="mobile-only">
             <a
                 href={`tel:${CONTACT_INFO.phone}`}
                 className="btn btn-primary"
-                style={{ flex: 1, backgroundColor: '#000' }}
+                style={{ flex: 1, backgroundColor: '#000', backgroundImage: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
             >
-                Call Now
+                📞 Call
             </a>
             <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
-                style={{ flex: 1, backgroundColor: '#25D366' }}
+                style={{ flex: 1, backgroundColor: '#25D366', backgroundImage: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
             >
-                WhatsApp
+                💬 WhatsApp
             </a>
         </div>
     );
