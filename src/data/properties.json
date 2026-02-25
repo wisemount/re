@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "title": "Luxury 3BHK Apartment in Downtown",
+    "slug": "luxury-3bhk-apartment-downtown",
+    "price": "₹1,50,00,000",
+    "location": "Downtown",
+    "type": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqft": 1800,
+    "images": ["/images/prop1-1.jpg", "/images/prop1-2.jpg"],
+    "description": "A spacious and modern 3BHK apartment in the heart of Downtown with panoramic city views.",
+    "amenities": ["Parking", "Gym", "Pool", "24/7 Security"],
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Modern Villa with Private Garden",
+    "slug": "modern-villa-private-garden",
+    "price": "₹3,20,00,000",
+    "location": "Green Valley",
+    "type": "Villa",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": 3500,
+    "images": ["/images/prop2-1.jpg"],
+    "description": "Exquisite villa featuring a private garden, modular kitchen, and luxury finishes.",
+    "amenities": ["Garden", "Parking", "Smart Home", "Solar Panels"],
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Cozy Studio Apartment",
+    "slug": "cozy-studio-apartment",
+    "price": "₹45,00,000",
+    "location": "Northside",
+    "type": "Studio",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 550,
+    "images": ["/images/prop3-1.jpg"],
+    "description": "Perfect for young professionals, this studio offers convenience and modern living.",
+    "amenities": ["Parking", "Laundry", "Elevator"],
+    "featured": false
+  }
+]

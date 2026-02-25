@@ -1,0 +1,5 @@
+[
+  { "id": "downtown", "name": "Downtown", "slug": "downtown" },
+  { "id": "green-valley", "name": "Green Valley", "slug": "green-valley" },
+  { "id": "northside", "name": "Northside", "slug": "northside" }
+]
